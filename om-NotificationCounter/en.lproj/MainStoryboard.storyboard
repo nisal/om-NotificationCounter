@@ -16,30 +16,16 @@
                                 <color key="backgroundColor" red="0.98680127187868982" green="1" blue="0.67375043200167561" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="cae-Qu-V2L"/>
+                                    <constraint firstAttribute="width" constant="278" id="rdc-HH-onz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIE-5I-RP4">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="284" id="iYi-BJ-v39"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetButton:" destination="2" eventType="touchUpInside" id="iWn-2T-mTl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDr-kU-Z5S">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="WPE-Gy-YhT"/>
+                                    <constraint firstAttribute="height" constant="67" id="8tL-6b-oGz"/>
+                                    <constraint firstAttribute="width" constant="284" id="moF-dn-J0M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Count Up">
@@ -55,8 +41,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41B-77-Jaa">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="MPW-R2-tRx"/>
-                                    <constraint firstAttribute="width" constant="284" id="fcA-kn-XH1"/>
+                                    <constraint firstAttribute="height" constant="73" id="etY-0z-cd0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Count Down">
@@ -70,19 +55,86 @@
                                     <action selector="downButton:" destination="2" eventType="touchUpInside" id="CsE-gh-mWp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RY-Dx-wvM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="kD1-aZ-xWL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="UP">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upBtn:" destination="2" eventType="touchUpInside" id="jrh-cX-ZdH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNt-yT-ZpT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="srm-gA-KG2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dnBtn:" destination="2" eventType="touchUpInside" id="MuF-WK-oGC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-WZ-HhK">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtn:" destination="2" eventType="touchUpInside" id="VTH-vd-6xW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S81-aU-gIp">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset Count">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtn:" destination="2" eventType="touchUpInside" id="0XO-qY-7TK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uDr-kU-Z5S" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3ke-gC-5Sq"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="height" secondItem="6RY-Dx-wvM" secondAttribute="height" type="user" id="5cU-cg-c9k"/>
                             <constraint firstItem="41B-77-Jaa" firstAttribute="trailing" secondItem="uDr-kU-Z5S" secondAttribute="trailing" type="default" id="5he-uG-AV2"/>
-                            <constraint firstItem="IIE-5I-RP4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7n4-pL-Unq"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="18" type="user" id="61u-Eg-L3r"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="100" type="user" id="6hN-t1-Cg1"/>
                             <constraint firstItem="VGe-m2-TgG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="79" id="Ela-d1-fvn"/>
                             <constraint firstItem="41B-77-Jaa" firstAttribute="top" secondItem="uDr-kU-Z5S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HWE-ku-tmt"/>
-                            <constraint firstItem="VGe-m2-TgG" firstAttribute="leading" secondItem="IIE-5I-RP4" secondAttribute="leading" type="default" id="Mdj-iQ-ciM"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="leading" secondItem="6RY-Dx-wvM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MSG-P2-7ER"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="height" secondItem="ThO-WZ-HhK" secondAttribute="height" type="user" id="MgD-Pq-WO1"/>
+                            <constraint firstItem="ThO-WZ-HhK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="18" type="user" id="PSJ-Ih-xp4"/>
+                            <constraint firstItem="6RY-Dx-wvM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="18" type="user" id="QWQ-Ii-1BI"/>
                             <constraint firstItem="41B-77-Jaa" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zym-tz-ahy"/>
-                            <constraint firstItem="VGe-m2-TgG" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="a5N-e9-b3e"/>
-                            <constraint firstItem="VGe-m2-TgG" firstAttribute="trailing" secondItem="IIE-5I-RP4" secondAttribute="trailing" type="default" id="qgR-3S-0SO"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="baseline" secondItem="6RY-Dx-wvM" secondAttribute="baseline" type="default" id="fXz-Qu-mOc"/>
+                            <constraint firstItem="S81-aU-gIp" firstAttribute="centerX" secondItem="VGe-m2-TgG" secondAttribute="centerX" type="default" id="hEl-Jw-ysG"/>
+                            <constraint firstItem="S81-aU-gIp" firstAttribute="top" secondItem="41B-77-Jaa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pvb-Lg-Avn"/>
+                            <constraint firstItem="wNt-yT-ZpT" firstAttribute="width" secondItem="ThO-WZ-HhK" secondAttribute="width" type="user" id="qMq-ab-3cj"/>
+                            <constraint firstItem="VGe-m2-TgG" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="syh-jP-ilm"/>
                             <constraint firstItem="uDr-kU-Z5S" firstAttribute="top" secondItem="VGe-m2-TgG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ua8-Jq-mm0"/>
+                            <constraint firstItem="ThO-WZ-HhK" firstAttribute="leading" secondItem="wNt-yT-ZpT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zEZ-h2-bUK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -91,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="5"/>
+            <point key="canvasLocation" x="42" y="5"/>
         </scene>
     </scenes>
     <classes>
@@ -101,8 +153,11 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dnBtn:"/>
                 <relationship kind="action" name="downButton:"/>
+                <relationship kind="action" name="resetBtn:"/>
                 <relationship kind="action" name="resetButton:"/>
+                <relationship kind="action" name="upBtn:"/>
                 <relationship kind="action" name="upButton:"/>
                 <relationship kind="outlet" name="counter" candidateClass="UILabel"/>
             </relationships>

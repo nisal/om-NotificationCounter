@@ -13,6 +13,9 @@
 - (IBAction)resetButton:(id)sender;
 - (IBAction)upButton:(id)sender;
 - (IBAction)downButton:(id)sender;
+- (IBAction)upBtn:(id)sender;
+- (IBAction)dnBtn:(id)sender;
+- (IBAction)resetBtn:(id)sender;
  
  
 @end
