@@ -16,6 +16,10 @@
 // for NSNotification with dictionary
 - (void)receiveEvent:(NSNotification *)notification;
 
+// for orientation change notifications
+- (void)postNotificationWithString:(NSString *)orientation;
+- (void)useNotificationWithString:(NSNotification*)notification;
+
 @end
 
 @implementation ViewController
@@ -35,6 +39,14 @@
     // for NSNotification with dictionary
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveEvent:) name:@"UpDownEvent" object:nil];
     
+    
+    // for orientation change notifications
+    NSString *notificationName = @"OCNotification";
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(useNotificationWithString:)
+     name:notificationName
+     object:nil];
     
     
 }
@@ -132,10 +144,54 @@
 // NSNotification with dictionary
 
 
+
+
+
+
+// for orientation change notifications
+- (void)postNotificationWithString:(NSString *)orientation //post notification method and logic
+{
+    NSString *notificationName = @"OCNotification";
+    NSString *key = @"OrientationStringValue";
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:orientation forKey:key];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:dictionary];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+        [self postNotificationWithString:@"Portrait"];
+    }
+    else {
+        [self postNotificationWithString:@"Landscape"];
+    }
+}
+
+- (void)useNotificationWithString:(NSNotification *)notification //use notification method and logic
+{
+    NSString *key = @"OrientationStringValue";
+    NSDictionary *dictionary = [notification userInfo];
+    NSString *stringValueToUse = [dictionary valueForKey:key];
+    NSLog(@"Device orientation --> %@",stringValueToUse);
+    
+    self.Orientation.text = [NSString stringWithFormat:@" Orientation: %@",stringValueToUse];
+    
+}
+
+
+
+
+
+
+
+
+
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"up" object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"down" object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"reset" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

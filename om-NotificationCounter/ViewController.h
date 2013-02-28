@@ -17,5 +17,6 @@
 - (IBAction)dnBtn:(id)sender;
 - (IBAction)resetBtn:(id)sender;
  
+@property (weak, nonatomic) IBOutlet UILabel *Orientation;
  
 @end
